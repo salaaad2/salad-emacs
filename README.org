@@ -1,0 +1,6 @@
+* SALAD-EMACS
+** It's cool
+** Its has it's own banner
+** you should use it
+
+*** also (and moslty) available on [[https://gitlab.com/salaaad2/salad-emacs][gitlab]]
