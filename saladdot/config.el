@@ -61,7 +61,7 @@
 (setq lsp-enable-indentation nil)
 (setq lsp-file-watch-threshold 70)
 (setq lsp-completion-enable t)
-(setq fancy-splash-image "~/media/Images/salade.png")
+(setq fancy-splash-image "~/media/salade.png")
 ;;(setq fancy-splash-image "~/Images/wallpapers/night.png")
 
 ;; Here are some additional functions/macros that could help you configure Doom:
