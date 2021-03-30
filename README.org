@@ -1,6 +1,13 @@
 * SALAD-EMACS
 ** It's cool
-** Its has it's own banner
+** It has it's own banner
 ** you should use it
+** INSTALLATION
+- Install doom emacs
+- copy saladdot to ~/.salad.d
+- copy and overwrite emacsdot to ~/.emacs.d/
+- copy media/salad.png wherever you like and the 'fancy-splash-image' field in saladdot/config.el
+- start editing
+
 
 *** also (and moslty) available on [[https://gitlab.com/salaaad2/salad-emacs][gitlab]]
