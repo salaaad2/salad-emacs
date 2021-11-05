@@ -20,17 +20,18 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 ;;(setq doom-font (font-spec ("DejaVu Saans Mono") :size 16))
-(setq doom-font (font-spec :family "monospace" :size 17))
+(setq doom-font (font-spec :family "monospace" :size 16))
+;;(setq doom-font (font-spec :family "iosevka" :weight 'regular :size 18))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;(setq doom-theme 'doom-one)
-(setq doom-theme 'doom-gruvbox)
+        (setq doom-theme 'doom-gruvbox)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Documents/org/")
+(setq org-directory "~/docs/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -40,7 +41,7 @@
 (zone-when-idle 120)
 (require 'shell-pop)
 (custom-set-variables
- '(shell-pop-shell-type (quote ("ansi-term" "*ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
+ '(shell-pop-shell-type (quote ("ans-iterm" "*ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
  '(shell-pop-term-shell "/bin/zsh")
  '(shell-pop-universal-key "<f5>")
  '(shell-pop-window-size 30)
@@ -50,18 +51,17 @@
  '(shell-pop-restore-window-configuration t)
  '(shell-pop-cleanup-buffer-at-process-exit t))
 
-;;(add-hook 'c++-mode-hook (lambda () (lsp)))
-(require 'ccls)
-(add-hook 'c-mode-hook (lambda () (lsp)))
-(add-hook 'objc-mode-hook (lambda () (lsp)))
-(setq ccls-executable "/usr/local/bin/ccls")
-
 (require 'lsp)
 (advice-add 'lsp :before (lambda (&rest _args) (eval '(setf (lsp-session-server-id->folders (lsp-session)) (ht)))))
 (setq lsp-enable-indentation nil)
 (setq lsp-file-watch-threshold 70)
 (setq lsp-completion-enable t)
-(setq fancy-splash-image "~/media/salade.png")
+;;(require 'ccls)
+;; (add-hook 'c++-mode-hook 'lsp)
+;; (add-hook 'c-mode-hook 'lsp)
+;;(setq ccls-executable "/usr/local/bin/ccls")
+
+(setq fancy-splash-image "~/media/Images/salade.png")
 ;;(setq fancy-splash-image "~/Images/wallpapers/night.png")
 
 ;; Here are some additional functions/macros that could help you configure Doom:
